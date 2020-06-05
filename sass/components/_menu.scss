@@ -1,0 +1,238 @@
+.nav-header{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	padding: 35px 20px;
+	z-index: 33;
+	
+	.top-right-nav{
+		li{
+			list-style: none;
+		    float: left;
+		    margin: 0 10px;
+		    a{
+		    	cursor: pointer;
+		    	.hello-user{
+		    		margin-left: 5px;
+		    		padding-right: 15px;
+		    		position: relative;
+		    		color: #646464;
+		    		span{
+		    			color: $green;
+		    		}
+		    		&:after{
+		    			position: absolute;
+		    			right: 0;
+		    			top: -5px;
+		    			content: '';
+		    			background-color: #d3d3d3;
+		    			width: 1px;
+		    			height: 25px;
+		    		}
+		    	}
+		    	.logout{
+		    		width: 19px;
+		    		margin-top: 2px;
+		    	}
+		    }
+		}
+	}
+}
+
+.main-container{
+	.top-title{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 90px;
+		padding: 25px 20px 25px 120px;
+		border-bottom: 1px solid #d2d2d2;
+		min-width: 950px;
+		z-index: 7;
+		.logo-wrapper{
+			.main-logo{
+				margin-right: 5px;
+				margin-top: -6px;
+				path{
+					fill: $green;
+				}
+			}
+			.menu-parent{
+				color: $green;
+				line-height: 14px;
+				text-transform: uppercase;
+				margin-top: 0px;
+			}
+			.menu-title{
+				color: $green;
+			}
+		}
+	}
+}
+
+.nav-footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	padding: 25px 30px 25px 50px;
+	box-shadow: 0px 0px 16px rgba(23, 23, 24, 0.3);
+	z-index: 7;
+	.menu-bottom{
+		padding: 2px;
+		margin: 0;
+		li{
+			list-style: none;
+			float: left;
+			&:last-child{
+				a{
+					&:after{
+	    				width: 0px;
+	    			}
+				}
+    		}
+			&.active{
+				a{
+					background-color: $green;
+					&:after{
+	    				width: 0px;
+	    			}
+	    			svg{
+	    				path{
+	    					fill: #fff;
+	    				}
+	    			}
+				}
+    		}
+		}
+		a{
+			float: left;
+			cursor: pointer;
+			position: relative;
+			width: 66px;
+			height: 56px;
+			top: -25px;
+			border-radius: 4px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			&:after{
+    			position: absolute;
+			    right: 0;
+			    top: 15px;
+			    content: '';
+			    background-color: #d3d3d3;
+			    width: 1px;
+			    height: 30px;
+    		}
+    		svg{
+    			position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+    			path{
+    				fill: $green;
+    			}
+    		}
+		}
+		
+	}
+	.bottom-submenu{
+		position: absolute;
+		box-shadow: 2px 2px 16px rgba(23, 23, 24, 0.6);
+		background-color: #f5f5f5;
+		bottom: 70px;
+		border-radius: 5px;
+		display: none;
+		font-size: 12px;
+		min-width: 220px;
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			position: relative;
+			float: none;
+			list-style: none;
+			padding: 15px 25px;
+			cursor: pointer;
+			transition: .3s all;
+			&:first-child{
+				padding-top: 20px;
+			}
+			&:hover, &.active{
+				background-color: $green;
+				color: #fff;
+			}
+			&.active{
+				&.has-sub{
+					i{
+						color: #fff;
+					}
+				}
+			}
+			&.has-sub{
+				padding: 0;
+				&.open{
+					background-color: $green;
+					color: #fff;
+	    			i{
+	    				color: #fff;
+	    				transform: rotate(-180deg);
+	    			}
+				}
+				.title-sub{
+					padding: 15px 25px;
+				}
+				i{
+					position: absolute;
+				    right: 11px;
+				    font-size: 10px;
+				    top: 18px;
+				    color: $green;
+				}
+	    		&:hover{
+	    			i{
+	    				color: #fff;
+	    			}
+	    			.secondlevel-submenu{
+	    				li{
+	    					color: #646464;
+	    				}
+	    			}
+	    		}
+	    		.secondlevel-submenu{
+	    			background-color: #cfcfcf;
+	    			display: none;
+	    			ul{
+	    				padding: 0;
+	    				margin: 0;
+	    				li{
+	    					padding: 10px 25px;
+	    					color: #646464;
+	    					&:first-child{
+								padding-top: 15px;
+							}
+							&:last-child{
+								padding-bottom: 15px;
+							}
+	    					&:hover, &.active{
+	    						background-color: #942d2f;
+	    						color: #fff;
+	    					}
+	    				}
+	    			}
+	    		}
+			}
+		}
+		.submenu-title{
+			text-transform: uppercase;
+			padding: 15px 25px;
+			background-color: $green;
+			color: #fff;
+			letter-spacing: 1px;
+			border-top: 1px solid #fff;
+		} 
+	}
+}

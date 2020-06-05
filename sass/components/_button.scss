@@ -1,0 +1,158 @@
+.btnLCSS {
+    min-width: 90px;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    text-align: center;
+    text-transform: capitalize;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    outline: none !important;
+    margin-right: 5px;
+    transition: .2s all;
+    &:last-child{
+        margin-right: 0;
+    }
+    &.btnLCSS-default {
+        background: $caramel;
+        color: #fff;
+        &:hover{
+            background: darken($caramel, 10%)
+        }
+        &:disabled{
+            background: #dcdcdc !important;
+            color: #969696;
+        }
+    }
+    &.btnLCSS-create {
+        background: #5B817C;
+        color: #fff;
+        padding: 8px 20px;
+        &:hover{
+            background: lighten(#5B817C, 10%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .ic-create{
+            margin: -4px 10px 0 -5px;
+        }
+        .glyphicon{
+            color: $caramel;
+            margin-right: 5px;
+        }
+    }
+    &.btnLCSS-nav {
+        background: #a8b5ad;
+        color: #fff;
+        padding: 3px 20px;
+        min-width: 60px;
+        height: 28px;
+        &:hover{
+            background: lighten(#a8b5ad, 10%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        i{
+            font-size: 10px;
+        }
+    }
+}
+
+.notif-create{
+    padding: 0 20px;
+    margin-top: 12px;
+    font-style: italic;
+    color: #969696;
+    span{
+        color: $caramel;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.ic-export{
+    margin: -2px 10px 0 -5px;
+    width: 18px;
+}
+
+.pagination-custom{
+    img{
+        margin: 0 7px;
+        cursor: pointer;
+        margin-top: -2px;
+        &.next{
+            transform: rotate(180deg);
+        }
+    }
+    i{
+        color: $caramel;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .prev{
+        transform: rotate(180deg);
+    }
+}
+
+.btn-pagination{
+    font-size: 11px;
+    width: 25px;
+    height: 25px;
+    padding: 5px 0 4px;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    color: #646464;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 4px rgba(255, 255, 0255, 0.15);
+    margin-right: 2px;
+    transition: .2s all;
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover{
+        background: $caramel;
+        color: #fff;
+    }
+    &.active{
+        background: $caramel;
+        color: #fff;
+    }
+    &.last{
+        border-radius: 3px;
+        width: auto;
+        padding: 5px 10px 4px;
+        background: $caramel;
+        color: #fff;
+    }
+}
+
+.input-group{
+    input{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0; 
+    }
+    button{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 38px;
+    }
+}
+
+.uib-datepicker-popup{
+    button{
+        width: auto
+    }
+}
